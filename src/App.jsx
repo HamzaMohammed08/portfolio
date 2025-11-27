@@ -37,7 +37,7 @@ const App = () => {
               fontSize: '0.95rem',
               fontWeight: '500'
             }}>
-              © {new Date().getFullYear()} Hamza Muhammed. Crafted with React & AI.
+              © {new Date().getFullYear()} Hamza Mohammed. Designed & Engineered with passion.
             </p>
           </div>
         </footer>
