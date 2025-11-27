@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Send } from 'lucide-react';
+import { ArrowRight, Send, GraduationCap, Code, Rocket } from 'lucide-react';
 import { supabase } from '../supabaseClient';
 
 const Home = () => {
@@ -496,25 +496,111 @@ const Home = () => {
                             </h2>
 
                             <div style={{
-                                fontSize: '1rem',
-                                lineHeight: '1.7',
-                                color: 'rgba(255,255,255,0.9)',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                gap: '1.5rem',
-                                maxWidth: '540px'
+                                gap: '2rem',
+                                position: 'relative'
                             }}>
-                                <p>
-                                    My journey started at <strong style={{ color: '#fff' }}>Willowmoore High School</strong>, where I completed my Matric in 2022. It was there that I discovered my passion for technology and problem-solving.
-                                </p>
+                                {/* Timeline Line */}
+                                <div style={{
+                                    position: 'absolute',
+                                    left: '24px',
+                                    top: '20px',
+                                    bottom: '20px',
+                                    width: '2px',
+                                    background: 'rgba(255,255,255,0.2)',
+                                    zIndex: 0
+                                }} />
 
-                                <p>
-                                    Currently, I am pursuing a B.S. in Software Engineering at <strong style={{ color: '#fff' }}>Eduvos</strong>. I've been rigorously applying my knowledge to build a diverse portfolio of projects, ranging from mobile apps with React Native to full-stack web solutions.
-                                </p>
+                                {/* Milestone 1: 2022 */}
+                                <div style={{ display: 'flex', gap: '1.5rem', position: 'relative', zIndex: 1 }}>
+                                    <div style={{
+                                        minWidth: '50px',
+                                        height: '50px',
+                                        borderRadius: '50%',
+                                        background: 'var(--bg-lime)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        boxShadow: '0 0 0 4px rgba(255, 159, 67, 0.2)'
+                                    }}>
+                                        <GraduationCap size={24} color="#fff" />
+                                    </div>
+                                    <div style={{
+                                        background: 'rgba(255, 255, 255, 0.1)',
+                                        backdropFilter: 'blur(10px)',
+                                        padding: '1.5rem',
+                                        borderRadius: '16px',
+                                        border: '1px solid rgba(255,255,255,0.1)',
+                                        flex: 1
+                                    }}>
+                                        <span style={{ color: 'var(--bg-lime)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px' }}>2022</span>
+                                        <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0.5rem 0', fontWeight: '700' }}>The Foundation</h3>
+                                        <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                            Completed Matric at <strong>Willowmoore High School</strong>. This is where my curiosity for technology turned into a serious pursuit of problem-solving through code.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                <p>
-                                    I am deeply invested in the future of software, actively exploring AI agents and machine learning integration to create smarter, more efficient applications.
-                                </p>
+                                {/* Milestone 2: Present */}
+                                <div style={{ display: 'flex', gap: '1.5rem', position: 'relative', zIndex: 1 }}>
+                                    <div style={{
+                                        minWidth: '50px',
+                                        height: '50px',
+                                        borderRadius: '50%',
+                                        background: '#fff',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        border: '2px solid var(--bg-lime)'
+                                    }}>
+                                        <Code size={24} color="var(--bg-purple)" />
+                                    </div>
+                                    <div style={{
+                                        background: 'rgba(255, 255, 255, 0.1)',
+                                        backdropFilter: 'blur(10px)',
+                                        padding: '1.5rem',
+                                        borderRadius: '16px',
+                                        border: '1px solid rgba(255,255,255,0.1)',
+                                        flex: 1
+                                    }}>
+                                        <span style={{ color: 'var(--bg-lime)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px' }}>PRESENT</span>
+                                        <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0.5rem 0', fontWeight: '700' }}>Building & Learning</h3>
+                                        <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                            Pursuing B.S. Software Engineering at <strong>Eduvos</strong>. Rigorously applying concepts to build full-stack apps, React Native mobile solutions, and scalable backends.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Milestone 3: Future */}
+                                <div style={{ display: 'flex', gap: '1.5rem', position: 'relative', zIndex: 1 }}>
+                                    <div style={{
+                                        minWidth: '50px',
+                                        height: '50px',
+                                        borderRadius: '50%',
+                                        background: 'rgba(255,255,255,0.1)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        border: '2px solid rgba(255,255,255,0.3)'
+                                    }}>
+                                        <Rocket size={24} color="#fff" />
+                                    </div>
+                                    <div style={{
+                                        background: 'rgba(255, 255, 255, 0.05)',
+                                        backdropFilter: 'blur(10px)',
+                                        padding: '1.5rem',
+                                        borderRadius: '16px',
+                                        border: '1px solid rgba(255,255,255,0.05)',
+                                        flex: 1
+                                    }}>
+                                        <span style={{ color: 'rgba(255,255,255,0.6)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px' }}>FUTURE FOCUS</span>
+                                        <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0.5rem 0', fontWeight: '700' }}>AI Integration</h3>
+                                        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                            Deeply invested in the future of software—specifically <strong>AI Agents</strong> and machine learning integration to create smarter, autonomous systems.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
 
