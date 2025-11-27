@@ -48,12 +48,7 @@ const About = () => {
                 </motion.div>
 
                 {/* Main Content Grid */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.5fr 1fr',
-                    gap: '4rem',
-                    marginBottom: '5rem'
-                }}>
+                <div className="about-grid" style={{ display: 'grid', gap: '4rem', marginBottom: '5rem' }}>
                     {/* Left Column - Bio */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -271,17 +266,6 @@ const About = () => {
                     </div>
                 </motion.div>
             </div>
-
-            <style>{`
-        @media (max-width: 968px) {
-          div[style*="gridTemplateColumns: '1.5fr 1fr'"] {
-            grid-template-columns: 1fr !important;
-          }
-          div[style*="gridTemplateColumns: 'repeat(auto-fit"] {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
         </div>
     );
 };

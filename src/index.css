@@ -148,3 +148,7 @@ ul {
 .resume-grid {
   grid-template-columns: 2fr 1fr;
 }
+
+.about-grid {
+  grid-template-columns: 1.5fr 1fr;
+}

@@ -90,6 +90,17 @@
   .resume-grid > div:nth-child(2) {
     order: 2; /* Ensure sidebar stays at bottom on mobile if needed, or just natural flow */
   }
+
+  /* About Page */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  
+  /* Ensure auto-fit grids don't overflow */
+  .about-grid + div > div {
+     grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 480px) {
