@@ -170,7 +170,7 @@ const Resume = () => {
                     </div>
                 </motion.div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
+                <div className="resume-grid" style={{ display: 'grid', gap: '4rem' }}>
                     {/* Main Content Column */}
                     <div>
                         {/* Professional Summary */}
@@ -363,13 +363,6 @@ const Resume = () => {
                 </div>
             </div>
 
-            <style>{`
-                @media (max-width: 968px) {
-                    div[style*="gridTemplateColumns: '2fr 1fr'"] {
-                        grid-template-columns: 1fr !important;
-                    }
-                }
-            `}</style>
         </div>
     );
 };

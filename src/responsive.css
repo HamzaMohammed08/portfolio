@@ -73,6 +73,23 @@
   .shelf-grid {
     grid-template-columns: 1fr !important;
   }
+
+  /* Resume Page */
+  .resume-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  
+  /* Resume Header adjustment */
+  .resume-grid h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Sidebar in Resume */
+  .resume-grid > div:nth-child(2) {
+    order: 2; /* Ensure sidebar stays at bottom on mobile if needed, or just natural flow */
+  }
 }
 
 @media (max-width: 480px) {

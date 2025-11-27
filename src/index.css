@@ -144,3 +144,7 @@ ul {
   opacity: 0;
   transition: opacity 300ms;
 }
+
+.resume-grid {
+  grid-template-columns: 2fr 1fr;
+}
