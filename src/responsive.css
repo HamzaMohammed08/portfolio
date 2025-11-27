@@ -1,0 +1,86 @@
+/* Mobile Responsive Overrides */
+
+@media (max-width: 768px) {
+  /* General Layout */
+  .container {
+    padding: 0 1.5rem !important;
+  }
+
+  section {
+    padding: 60px 0 !important;
+    min-height: auto !important;
+  }
+
+  /* Reset Grids to Stack */
+  #hero .container,
+  #design .container > div,
+  #over-years .container > div,
+  #projects .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center;
+  }
+
+  /* Hero Section Specifics */
+  #hero {
+    padding-top: 120px !important;
+  }
+
+  #hero h1 {
+    font-size: 3rem !important;
+  }
+  
+  #hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Left align text in Hero/Design if preferred, or keep center for mobile */
+  #hero .container > div:first-child {
+    text-align: left;
+  }
+
+  /* Hide or Adjust Decorative Elements */
+  #hero svg[viewBox="0 0 200 800"] {
+    display: none;
+  }
+
+  /* Design Section */
+  #design .container > div > div {
+    margin-top: 0 !important; /* Remove staggered margin */
+    padding-top: 0 !important;
+  }
+
+  /* Projects Section */
+  #projects .container > div {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Hide the vertical divider */
+  #projects .container > div > div:nth-child(2) {
+    display: none !important;
+  }
+  
+  /* Center align project items */
+  #projects .container > div > div {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Shelf/Blog Grid */
+  .shelf-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+}
