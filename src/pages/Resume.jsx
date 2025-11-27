@@ -64,8 +64,8 @@ const Resume = () => {
         {
             degree: 'B.S. Software Engineering',
             institution: 'Eduvos',
-            period: '2024 - Present',
-            description: 'Pursuing a comprehensive degree in software engineering.'
+            period: '2023 - Present',
+            description: 'Major in Software Engineering. Focusing on scalable architecture, algorithms, and full-stack development principles.'
         },
         {
             degree: 'Matric',
